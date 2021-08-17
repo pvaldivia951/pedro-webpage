@@ -1,7 +1,23 @@
 .App {
   text-align: center;
 }
+/* Top Navigation Bar */
+.top-nav {
+  overflow: hidden;
+  background-color: #324A5F;
+}
 
+.top-nav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Color Properties */
 .Prmy-Section-Color {
   background-color: #324A5F;
 }
@@ -14,71 +30,87 @@
   background-color: #EBEBEB;
 }
 
+/* Image Properties */
 img {
   border-radius: 50%;
+  justify-content: center;
+  margin: auto;
 }
 
 .Border-Color {
   border: 7px solid #324A5F;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 h1 {text-align: center;}
 
-.Line-Break-Prmy {
+h1::after {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  border: 0;
-  border-top: 1px solid rgba(238, 235, 235, 0.342);
-  width: 700px;
-}
-
-.Line-Break-Sndy {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 0;
-  border-top: 1px solid rgba(3, 3, 3, 0.212);
-  width: 700px;
+  border: 1;
+  border-top: 3px solid rgba(0, 0, 0, 0.342);
+  width: 80%;
 }
 
 .p-margin {
   margin: 0;
 }
 
-html,body {
-  height: 100%;
+.div-padding {
+  padding: 1em;
 }
+
+/* Flex Containers */
+.my-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.my-container div {
+  width: 100%;
+}
+
+.my-container div.small {
+  position:relative;
+  width: 40%;
+}
+
+@media (max-width: 1200px) {
+  .my-container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  .my-container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 768px) {
+  .my-container {
+    flex-direction: column;
+    max-width: 540px;
+  }
+
+  .my-container div.small {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .my-container {
+    max-width: 540px;
+  }
+}
+
+/* * {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+} */
